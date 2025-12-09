@@ -16,7 +16,6 @@ const server = http.createServer((req, res) => {
         '.json': 'application/json',
         '.png': 'image/png',
         '.jpg': 'image/jpg',
-        '.jpg': 'image/jp',
         '.gif': 'image/gif',
     };
    
@@ -42,4 +41,3 @@ const server = http.createServer((req, res) => {
 
 server.listen(port);
 console.log('Server running at http://127.0.0.1:' + port + '/');
- print(helloworld);

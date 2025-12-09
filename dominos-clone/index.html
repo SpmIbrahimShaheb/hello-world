@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominos - Modern Cravings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- App Container -->
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="glass-nav">
+            <div class="logo">
+                <i class="fas fa-pizza-slice logo-icon"></i>
+                <span>DOMINOS</span>
+            </div>
+            <div class="nav-links">
+                <a href="#menu" class="active">Menu</a>
+                <a href="#deals">Deals</a>
+                <a href="#stores">Stores</a>
+            </div>
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Taste the <span class="text-gradient">Future</span> of Pizza</h1>
+                <p>Hand-tossed artisan dough, vine-ripened tomato sauce, and 100% real mozzarella. Delivered hot, fast,
+                    and fresh.</p>
+                <a href="#menu" class="cta-btn">Order Now</a>
+            </div>
+            <div class="hero-image">
+                <div class="pizza-float">
+                    <!-- Placeholder for generated pizza image -->
+                    <div class="pizza-placeholder">🍕</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <h2 class="section-title">Curated <span class="text-highlight">Menu</span></h2>
+            <div class="menu-grid" id="menu-grid">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will go here -->
+            <div class="empty-cart-msg">Your cart is empty</div>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
